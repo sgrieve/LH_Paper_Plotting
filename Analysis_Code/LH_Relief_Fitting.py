@@ -194,7 +194,7 @@ plt.plot(LH_Sorted,R_Sorted,'r-')
 #annotate the figure with the r squared and critical slope value    
 plt.annotate('$\mathregular{R^2}$= '+str(round(r_sq,2)), xy=(0.1, 0.8), xycoords='axes fraction', fontsize=12,
         horizontalalignment='left', verticalalignment='bottom')
-plt.annotate('$\mathregular{S_c}$= '+str(round(Sc,2)), xy=(0.1, 0.73), xycoords='axes fraction', fontsize=12,
+plt.annotate('$\mathregular{S_c}$= '+str(round(Sc,20)), xy=(0.1, 0.73), xycoords='axes fraction', fontsize=12,
         horizontalalignment='left', verticalalignment='bottom')
    
 #set the x and y max based on the input params
