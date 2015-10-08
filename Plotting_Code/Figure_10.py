@@ -100,9 +100,9 @@ rcParams['ytick.direction'] = 'out'
 #================ modifyable parameters start here ====================
 
 #paths to the data and to save the figure to
-path = '' #path to the folder contaning the hilltopdata files
-Filenames = ['C:/Users/Stuart/Dropbox/final_data_for_plotting/nc/NC_HilltopData.csv','C:/Users/Stuart/Dropbox/final_data_for_plotting/or/OR_HilltopData.csv','C:/Users/Stuart/Dropbox/final_data_for_plotting/gm/GM_HilltopData.csv','C:/Users/Stuart/Dropbox/final_data_for_plotting/cr/CR2_HilltopData.csv',] #names of the hilltopdata files
-figpath = 'C:/Users/Stuart/Desktop/FR/final_figures/' #path to save the final figures
+path = 'C:/Users/Stuart/Dropbox/LH_Paper/' #path to the folder contaning the hilltopdata files
+Filenames = ['nc/NC_HilltopData.csv','or/OR_HilltopData.csv','gm/GM_HilltopData.csv','cr/CR2_HilltopData.csv'] #names of the hilltopdata files
+figpath = 'C:/Users/Stuart/Desktop/FR/final_figures_revision/' #path to save the final figures
 
 #soil and rock density data
 #roering 2007 has a ratio of 1.5 to 2 but does not double rho_s  
@@ -200,11 +200,15 @@ for subplot_count, (filename,DD,EE,fig_label,location,xmax,ymax,xstep,ystep) in 
     
     
     #annotate the figure with the r squared and critical slope value    
-    plt.annotate('$\mathregular{R^2}$= '+str(round(r_sq,2)), xy=(0.1, 0.7), xycoords='axes fraction', fontsize=10,
+    plt.annotate('$\mathregular{R^2}$= '+str(round(r_sq,2)), xy=(0.05, 0.72), xycoords='axes fraction', fontsize=10,
             horizontalalignment='left', verticalalignment='bottom')
-    plt.annotate('$\mathregular{S_c}$= '+str(round(Sc,2)), xy=(0.1, 0.58), xycoords='axes fraction', fontsize=10,
+    if (subplot_count != 3):
+        plt.annotate('$\mathregular{S_c}$= '+str(round(Sc,2)), xy=(0.05, 0.6), xycoords='axes fraction', fontsize=10,
+                horizontalalignment='left', verticalalignment='bottom')
+    else:
+        plt.annotate('$\mathregular{S_c}$= '+'0.7245$\pm$0.0015', xy=(0.05, 0.6), xycoords='axes fraction', fontsize=10,
             horizontalalignment='left', verticalalignment='bottom')
-   
+       
     #set the x and y max based on the input params
     plt.xlim(0,xmax)
     plt.ylim(0,ymax)
