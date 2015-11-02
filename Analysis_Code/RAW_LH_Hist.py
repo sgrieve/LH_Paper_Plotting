@@ -140,4 +140,4 @@ fig.text(0.06, 0.5, 'Count', ha='center', va='center', rotation='vertical', size
 #full page = 190*230
 fig.set_size_inches(mm_to_inch(190), mm_to_inch(115))
     
-plt.savefig('LH_Hist_Raw.png', dpi = 500) #change to *.tif for submission
+plt.savefig(figpath+'LH_Hist_Raw.png', dpi = 500) #change to *.tif for submission
