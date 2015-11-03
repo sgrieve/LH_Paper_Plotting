@@ -208,7 +208,7 @@ def Merge_Hillshades(files):
         y_center = int(y_max/2.)    
         
         plt.xlim(x_center-2000,x_center+2000)    
-        plt.ylim(y_center-2000,y_center+2000)        
+        plt.ylim(y_center+2000,y_center-2000)        
         
     
     fig.text(0.5, 0.02, 'Easting (m)', ha='center', va='center', size=14)
