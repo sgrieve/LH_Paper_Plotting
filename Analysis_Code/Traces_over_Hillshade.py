@@ -134,7 +134,7 @@ for shape in sf.shapes():
 
 #set plot limits
 plt.xlim(xmin_plot,xmax_plot)
-plt.ylim(ymin_plot,ymax_plot)
+plt.ylim(ymax_plot,ymin_plot)
 
 #make white space for labels and ticks
 plt.subplots_adjust(left = 0.2, hspace=0.05)
